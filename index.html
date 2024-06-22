@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <section class="todo__container light__mode--bg">
+        <div class="todo__wrapper">
+            <div class="todo__header">
+                <h1 class="todo__heading">todo</h1>
+                <img src="lightmodeicon.svg" id="lightModeIcon" alt="Light Mode Icon" />
+                <img src="darkmodeicon.svg" id="darkModeIcon" alt="Dark Mode Icon" />
+            </div>
+            <div class="todo__task todo__new">
+                <label class="container">
+                    <input type="checkbox" disabled />
+                    <span class=" checkmark"></span>
+                </label>
+                <input type="text" class="todo__detail" placeholder="Create a new todo..." />
+            </div>
+            <div class="todo__tasks">
+                <div class="todo__task">
+                    <label class="container">
+                        <input type="checkbox" class="todo__defaultchecked" />
+                        <span class="checkmark"></span>
+                    </label>
+                    <p class="todo__detail">Complete Online Javascript course</p>
+                    <div class="close__btn">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M17.6777 0.707107L16.9706 0L8.83883 8.13173L0.707107 0L0 0.707107L8.13173 8.83883L0 16.9706L0.707106 17.6777L8.83883 9.54594L16.9706 17.6777L17.6777 16.9706L9.54594 8.83883L17.6777 0.707107Z"
+                                fill="#494C6B" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="todo__task">
+                    <label class="container">
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>
+                    </label>
+                    <p class="todo__detail">Jog around the park 3x</p>
+                    <div class="close__btn">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M17.6777 0.707107L16.9706 0L8.83883 8.13173L0.707107 0L0 0.707107L8.13173 8.83883L0 16.9706L0.707106 17.6777L8.83883 9.54594L16.9706 17.6777L17.6777 16.9706L9.54594 8.83883L17.6777 0.707107Z"
+                                fill="#494C6B" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="todo__task">
+                    <label class="container">
+                        <input type="checkbox" class="checkbox" />
+                        <span class="checkmark"></span>
+                    </label>
+                    <p class="todo__detail" class="todo">10 minutes meditation</p>
+                    <div class="close__btn">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M17.6777 0.707107L16.9706 0L8.83883 8.13173L0.707107 0L0 0.707107L8.13173 8.83883L0 16.9706L0.707106 17.6777L8.83883 9.54594L16.9706 17.6777L17.6777 16.9706L9.54594 8.83883L17.6777 0.707107Z"
+                                fill="#494C6B" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="todo__task">
+                    <label class="container">
+                        <input type="checkbox" class="checkbox" />
+                        <span class="checkmark"></span>
+                    </label>
+                    <p class="todo__detail" class="todo">Read for 1 hour</p>
+                    <div class="close__btn">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M17.6777 0.707107L16.9706 0L8.83883 8.13173L0.707107 0L0 0.707107L8.13173 8.83883L0 16.9706L0.707106 17.6777L8.83883 9.54594L16.9706 17.6777L17.6777 16.9706L9.54594 8.83883L17.6777 0.707107Z"
+                                fill="#494C6B" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="todo__task">
+                    <div class="checkmark__container">
+                        <label class="container">
+                            <input type="checkbox" />
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <p class="todo__detail" class="todo">Pick up groceries</p>
+                    <div class="close__btn">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M17.6777 0.707107L16.9706 0L8.83883 8.13173L0.707107 0L0 0.707107L8.13173 8.83883L0 16.9706L0.707106 17.6777L8.83883 9.54594L16.9706 17.6777L17.6777 16.9706L9.54594 8.83883L17.6777 0.707107Z"
+                                fill="#494C6B" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="todo__task">
+                    <label class="container">
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>
+                    </label>
+                    <p class="todo__detail" class="todo">
+                        Complete Todo App on Frontend Mentor
+                    </p>
+                    <div class="close__btn">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M17.6777 0.707107L16.9706 0L8.83883 8.13173L0.707107 0L0 0.707107L8.13173 8.83883L0 16.9706L0.707106 17.6777L8.83883 9.54594L16.9706 17.6777L17.6777 16.9706L9.54594 8.83883L17.6777 0.707107Z"
+                                fill="#494C6B" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="todo__items">
+                <div class="task__counterparent font-weight_light">
+                    <span class="task__counter">
+                        5
+                    </span>
+                    items left
+                </div>
+                <div class="todo__actions desktop">
+                    <span class="todo__all">All</span>
+                    <span>Active</span>
+                    <span class="completed">Completed</span>
+                </div>
+                <span class="font-weight_light todo__clear">Clear Completed</span>
+            </div>
+            <div class="todo__actions mobile">
+                <span class="todo__all">All</span>
+                <span>Active</span>
+                <span class="completed">Completed</span>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="script.js"></script>
+
+</html>
