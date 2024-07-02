@@ -78,19 +78,19 @@ document.addEventListener("DOMContentLoaded", () => {
           detail.classList.remove("todo__checked--darkmode");
         }
       });
+      console;
 
-      let checkboxes = document.querySelectorAll("input[type=checkbox]");
-      checkboxes.forEach((checkbox) => {
-        if (checkbox.classList.contains("todo__defaultchecked")) {
-          checkbox.checked = "true";
-          let secondTodoDetail = document.querySelectorAll(".todo__detail")[1];
-          secondTodoDetail.classList.add("todo__checked--darkmode");
-        }
-        // checkbox.addEventListener("change", updateTaskCounter);
-        checkbox.addEventListener("click", function () {
-          alert("hello");
-        });
-      });
+      // let checkboxes = document.querySelectorAll("input[type=checkbox]");
+      // checkboxes.forEach((checkbox) => {
+      //   if (checkbox.classList.contains("todo__defaultchecked")) {
+      //     checkbox.checked = "true";
+      //     let secondTodoDetail = document.querySelectorAll(".todo__detail")[1];
+      //     secondTodoDetail.classList.add("todo__checked--darkmode");
+      //   }
+      //   checkbox.addEventListener("click", function () {
+      //     alert("hello");
+      //   });
+      // });
     }
 
     label.appendChild(checkbox);
@@ -98,11 +98,11 @@ document.addEventListener("DOMContentLoaded", () => {
     task.appendChild(label);
     task.appendChild(detail);
     task.appendChild(closeButton);
-
     closeButton.addEventListener("click", () => {
       task.remove();
       updateTaskCounter();
     });
+
     checkbox.addEventListener("change", updateTaskCounter);
     return task;
   }
@@ -190,19 +190,21 @@ document.addEventListener("DOMContentLoaded", () => {
           todoTask.style.display = "none";
         }
       }
+      updateTaskCounter();
     });
   });
 
-  // Clear Completed Tasks
-  const clearCompletedTask = document.querySelector(".todo__clear");
-  clearCompletedTask.addEventListener("click", function () {
+  const clearTasks = document.querySelector(".todo__clear");
+  clearTasks.onclick = function () {
+    const todoTasks = document.querySelectorAll(".todo__task");
+
     todoTasks.forEach((todoTask) => {
       const checkbox = todoTask.querySelector("input[type=checkbox]");
       if (checkbox.checked) {
         todoTask.remove();
       }
     });
-  });
+  };
 
   // To make the first todo checked by default
   let checkboxes = document.querySelectorAll("input[type=checkbox]");
@@ -251,6 +253,7 @@ document.addEventListener("DOMContentLoaded", () => {
         inputs.forEach(function (input, index) {
           if (input.checked) {
             detail[index].classList.remove("todo__checked--darkmode");
+            detail[index].classList.add("todo__checked");
           }
         });
       });
@@ -276,30 +279,15 @@ document.addEventListener("DOMContentLoaded", () => {
         todoDetail.style.backgroundColor = "#25273d";
         todoItems.style.backgroundColor = "#25273d";
         todoActionsMobile.style.boxShadow = "none";
+      });
 
-        checkMarks.forEach((checkmark) => {
-          checkmark.style.border = "1px solid #393a4b";
-        });
-
-        inputs.forEach(function (input, index) {
-          let checkboxes = document.querySelectorAll("input[type=checkbox]");
-          checkboxes.forEach((checkbox) => {
-            if (checkbox.classList.contains("todo__defaultchecked")) {
-              checkbox.checked = "true";
-              let secondTodoDetail =
-                document.querySelectorAll(".todo__detail")[1];
-              secondTodoDetail.classList.add("todo__checked--darkmode");
-            }
-            checkbox.addEventListener("change", updateTaskCounter);
-          });
-
-          input.addEventListener("click", function () {
-            if (this.checked) {
-              detail[index].classList.add("todo__checked--darkmode");
-            } else {
-              detail[index].classList.remove("todo__checked--darkmode");
-            }
-          });
+      inputs.forEach(function (input, index) {
+        input.addEventListener("click", function () {
+          if (this.checked) {
+            detail[index].classList.add("todo__checked--darkmode");
+          } else {
+            detail[index].classList.remove("todo__checked--darkmode");
+          }
         });
       });
     }
